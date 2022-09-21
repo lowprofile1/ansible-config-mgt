@@ -2,7 +2,7 @@
 <Jenkins-Private-IP-Address>
 
 [nginx]
-<Nginx-Private-IP-Address>
+172.31.81.251 ansible_ssh_user='ec2-user'
 
 [sonar]
 172.31.16.117 ansible_ssh_user='ubuntu'
@@ -11,4 +11,4 @@
 172.31.80.117 ansible_ssh_user='ubuntu'
 
 [db]
-172.31.93.97 ansible_ssh_user='ubuntu'
+172.31.87.194 ansible_ssh_user='ubuntu'
