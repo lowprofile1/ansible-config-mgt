@@ -2,12 +2,12 @@
 # tasks file for artifactory
 
 - name: install java 11
-  yum:
+  apt:
     name: java-11-openjdk-devel
     state: present
 
 - name: install java 11
-  yum:
+  apt:
     name: 
       - wget
       - unzip
@@ -37,11 +37,11 @@
     follow: yes
 
 - name: update cache
-  yum:
+  apt:
     update_cache: yes
 
 - name: install artifactory
-  yum:
+  apt:
     name: jfrog-artifactory-oss
     state: present
 
