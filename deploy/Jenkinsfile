@@ -30,7 +30,12 @@ pipeline {
           sh 'sed -i "3 a roles_path=${WORKSPACE}/roles" ${WORKSPACE}/deploy/ansible.cfg'  
         }
      }
-    
+     stage('Run community') {
+        steps {
+          sh 'ansible-galaxy collection install community.postgresql' 
+            
+        }
+     }
 
       stage('Run Ansible playbook') {
         steps {
